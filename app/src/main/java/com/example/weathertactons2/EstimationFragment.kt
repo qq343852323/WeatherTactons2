@@ -60,7 +60,9 @@ class EstimationFragment : Fragment() {
             val downloadFolder = requireContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
             val editText = view.findViewById<EditText>(R.id.editTextNumber)
 //        File(downloadFolder?.path + File.separator + "test.txt").createNewFile()
-            File(downloadFolder?.path + File.separator + "test2.txt").appendText(editText.text.toString())
+            File(downloadFolder?.path + File.separator + "test2.txt").appendText(
+                editText.text.toString() + "\n"
+            )
         }
 
         view.findViewById<View>(R.id.next_button).setOnClickListener (
